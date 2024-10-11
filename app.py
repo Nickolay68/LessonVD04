@@ -2,8 +2,8 @@ from flask import Flask
 from datetime import datetime
 
 app = Flask(__name__)
+
 @app.route('/')
-@app.route("/<name>")
 def home():
     now = datetime.now()
     current_time = now.strftime("%Y-%m-%d %H:%M:%S")
@@ -11,6 +11,3 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-

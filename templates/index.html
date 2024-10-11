@@ -1,19 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Информация о пользователе</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 500px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .card table {
+            width: 100%;
+        }
+        .card td {
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Home Page</h1>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/contacts">Contacts</a></li>
-        </ul>
-    </nav>
-    <p>This is the main page of the website.</p>
+    <div class="card">
+        <table>
+            <tr>
+                <td><img src="../static/image/VD02 ДЗ.jpg" class="card-img-top" alt="..."></td>
+                <td>
+                    <p>ФИО: Молодцов Андрей Иванович <span class="name"></span></p>
+                    <p>E-mail: <a href="mailto:molodcov@yandex.ru" onclick="return confirmEmail()">molodcov@yandex.ru</a></p>
+                    <p>Дата рождения: 06.10.2004</p>
+                    <p>Город: Омск</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function confirmEmail() {
+            return confirm('Вы действительно хотите отправить письмо на этот email?');
+        }
+    </script>
 </body>
 </html>
